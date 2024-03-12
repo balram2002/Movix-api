@@ -7,7 +7,11 @@ import dotenv from "dotenv";
 dotenv.config();
 const app = express();
 
-app.use(cors());
+app.use(cors({
+    origin: ["https://movix-api.vercel.app", "https://movieverse-app.vercel.app"],
+    methods: ["POST", "GET"],
+    credentials: true
+}));
 app.use(express.json({ limit: "15mb" }));
 
 const dbHOST = process.env.MONGO_DB_URL;
