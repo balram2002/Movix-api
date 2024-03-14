@@ -8,7 +8,7 @@ dotenv.config();
 const app = express();
 
 app.use(cors({
-    origin: ["https://movix-api.vercel.app", "https://movieverse-app.vercel.app"],
+    origin: ["https://movix-api.vercel.app", "https://moviesverse.vercel.app"],
     methods: ["POST", "GET"],
     credentials: true
 }));
